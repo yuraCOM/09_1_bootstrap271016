@@ -1,0 +1,461 @@
+html {
+	height: 100%;
+	min-height:100%;
+}
+body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	min-height:100%;
+	}
+
+	/*  чтобы фон растянуть фон дива на весь видымый экроан - надо всем элементам от родителя назначать высоту и мин высоту
+100%.... далее вглубь кода - зафиксил клас .content для этого	*/
+.content {
+height: 100%;
+min-height:100%;
+}
+/* 1я колонка */
+.kolonka_01  {
+	padding-right: 0px;
+	padding-left: 0px;
+	background:#004EBC;
+	color:#fff;
+}
+
+.kolonka_01 .nav-pills>li{
+	text-align: center;
+	float: none;
+	margin-left: 0px;
+}
+
+.kolonka_01 .nav>li>a  {
+  border-radius:0;
+}
+
+.kolonka_01 .nav>li>a:hover  {
+  background-color:#3366cc;
+}
+
+.nav-pills>li{
+ text-align: center;
+}
+
+.kolonka_01  i {
+  color:#fff;
+  font-size: 30px;
+}
+
+/* 2я колонка  */
+.kolonka_02_slider {
+	padding-right: 0px;
+	padding-left: 0px;
+	position: relative;
+}
+/* 2я колонка шапка слайдера */
+.kolonka_02_slider .slideshow_top{
+	overflow:hidden;
+	position:absolute;
+	text-align:center;
+	width:100%;
+	z-index:500;
+
+}
+.kolonka_02_slider .slideshow_top h5{
+	color:#fff;
+	font-size:16px;
+	text-transform: uppercase;
+}
+.kolonka_02_slider .slideshow_top  .sfarts-logo img{
+	height:100px;
+}
+/* 2я колонка комментарий статьи и ссылка  */
+.kolonka_02_slider .carousel-caption{
+	padding: 0 10% 10% 10%;
+	margin: 0 auto 140px;
+	width: auto;
+}
+.kolonka_02_slider .carousel-caption a{
+	color:#fff;
+	font-size:50px;
+}
+.kolonka_02_slider .carousel-caption .pad:hover{
+	background-color:#004EBC;
+}
+
+.kolonka_02_slider .carousel-indicators{
+margin-bottom:50px;
+}
+/* нижние кнопки на слайдере */
+.pdfArea {
+  background-color: transparent;
+  width: 100%;
+  position: absolute;
+  bottom: 10px;
+  height: 40px;
+  z-index: 1000;
+  margin-left: 2px;
+}
+
+.pdfSection {
+  width: 49%;
+  height: 40px;
+  margin: 2px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  float: left;
+  text-decoration: none;
+  text-align: center;
+  padding-top: 10px;
+}
+.pdfSection a {
+	color:#fff;
+}
+#leftSection {
+  background-color: #1DAFEC;
+}
+#rightSection {
+  background-color: #8237AF;
+}
+
+/* 3я колонка */
+.kolonka_03{
+	background:#27ae60;
+	padding: 0;
+	margin: 0;
+	max-height: 100%;
+	min-height: 100%;
+	overflow: auto;
+	overflow-x: hidden;
+	z-index: 1002;
+	outline: none;
+}
+.kolonka_03 h5{
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 16px;
+}
+
+.kolonka_03 a{
+color:#fff;
+text-decoration:none;
+
+}
+.catalog{
+	padding: 0px 0;
+	list-style: none;
+	}
+
+.kolonka_03  .catalog a{
+	display:block;
+	line-height: 50px;
+	font-family: 'Avenir Next LT W01 Demi';
+	font-size: 18px;
+	border-bottom: solid 1px #FFF;
+	margin: 0 20px;
+	text-align: center;
+}
+.kolonka_03  .catalog  a.active{
+	color: #00F3FD;
+	background: url(jpg/pointer-wide.svg) no-repeat;
+	background-position: center;
+	background-size: 180px 41px;
+	outline: none;
+
+}
+
+.kolonka_03  .catalog  a:hover{
+	color: #2738AE;
+	background: url(img/pointer-wide.svg) no-repeat;
+	background-position: center;
+	background-size: 165px 41px;
+	outline: none;
+
+}
+
+.drawer{
+	z-index: 50;
+	height: 50px;
+	width: 20px;
+	position: absolute;
+	top: 45%;
+	background: #1ec766;
+	cursor: pointer;
+	border-radius: 1px;
+	border:1px black solid;
+}
+
+.drawer .glyphicon {
+	top: 16px;
+	left: 2px;
+}
+
+/* сдвиг меню запуск в скрипте */
+
+
+#stripe.animate {
+  margin-left: -569px;
+  transition-property: margin-left;
+  transition-duration:;
+  transition-timing-function: linear;
+}
+#stripe_kol04_kol05.animate {
+  margin-left: -341px;
+  transition-property: margin-left;
+  transition-duration:;
+  transition-timing-function: linear;
+  width:1000px;
+}
+
+
+
+/* можно менять прокрутку */
+/* http://www.simplecoding.org/css-oformlenie-skrollbara-v-stile-gmail.html */
+/* Для начала, зададим общую ширину скроллбара: */
+/::-webkit-scrollbar{
+    width:12px;
+
+}
+/* Теперь займёмся оформлением полосы прокрутки (светлосерый фон, серая граница, делаем границу чуть толще с левой стороны): */
+::-webkit-scrollbar-thumb{
+    border-width:1px 1px 1px 2px;
+    border-color: #777;
+    background-color: #9627AE;
+	height: 10px;
+
+}
+/* При наведении курсора (:hover) на полосу прокрутки делаем её более тёмной: */
+::-webkit-scrollbar-thumb:hover{
+    border-width: 1px 1px 1px 2px;
+    border-color: #555;
+    background-color: #777;
+}
+/* Ползунок в неактивном состоянии будет выглядеть как сплошной прямоугольник серого цвета (без границы) */
+::-webkit-scrollbar-track{
+    border-width:0;
+
+}
+/* При наведении курсора на ползунок, делаем его темнее и добавляем границу. */
+::-webkit-scrollbar-track:hover{
+    border-left: solid 1px #aaa;
+    background-color: #eee;
+}
+
+
+
+/* 4я колонка article_main разделяется на две колонки */
+.article_main{
+	background:aquamarine;
+	padding: 0;
+	margin: 0;
+	max-height: 100%;
+	min-height: 100%;
+	overflow: auto;
+	overflow-x: hidden;
+	z-index: 1002;
+	outline: none;
+}
+.article_main_row{
+	margin-right: 0px;
+	margin-left: 0px;
+}
+.article_col{
+	padding: 5px;
+	margin: 0px;
+	max-height: 100%;
+	min-height: 100%;
+}
+
+.article_item{
+	padding:5px 5px 5px 5px;
+	text-align:center;
+	background: #A9A9A9;
+	border-radius:15px;
+	margin-bottom:5px;
+
+}
+
+.article_item img{
+	max-width:100%;
+	border-radius:100% 50%;
+}
+.article_item a{
+	color:#27ae60;
+	text-decoration:none;
+}
+
+.article_item  a:hover {
+	text-decoration:underline;
+	color:#000;
+
+
+}
+.article_item :hover img{
+border-radius:0;
+
+
+}
+
+/* http://www.cssportal.com/css-tooltip-generator/
+
+ */
+/* подсказка 1 колонка меню */
+a.tooltips {
+  position: relative;
+  display: inline;
+}
+a.tooltips span {
+  position: absolute;
+  width:100px;
+  color: white;
+  background: #2ecc71;
+  height: 55px;
+  line-height: 55px;
+  text-align: center;
+  visibility: hidden;
+  /border-radius: 11px;
+  /box-shadow: 2px 0px 0px #2ecc71;
+}
+a.tooltips span:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  margin-top: -8px;
+  width: 0; height: 0;
+  border-right: 8px solid #2ecc71;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+}
+a:hover.tooltips span {
+  visibility: visible;
+  opacity: 1;
+  left: 100%;
+  top: 50%;
+  margin-top: -27.5px;
+  margin-left: 0px;
+  z-index: 10000;
+}
+  /* подменю меню sub_menu_main kolonka_01  которое спрятано и при нажатии выходит */
+
+.sub_menu_main{
+	display: none;
+	position:absolute;
+	width: 240px;
+	left: 114px;
+	top:0;
+	z-index:1003;
+	background-color:#004EBC;
+	color: #ffffff;
+	padding:0;
+	font-size: 17px;
+	text-transform: uppercase;
+	line-height: 55px;
+	list-style:none;
+	text-align: left;
+	font-weight:bold;
+}
+
+.sub_menu_main .menu_title_wrap p{
+padding-left:20px;
+display:inline-block;
+margin-bottom: 0px;
+}
+
+.sub_menu_main  a{
+padding-left:20px;
+}
+
+.sub_menu_main .menu_title_wrap  {
+background-color:#3366cc;
+
+}
+
+.sub_menu_main .menu_title_wrap  a{
+color:#fff;
+float:right;
+padding-left:12px;
+
+}
+.sub_menu_main .menu_title_wrap .btn{
+background:rgba(0, 0, 0, 0.247059);
+
+text-transform:none;
+margin-top: 12px;
+margin-right: 20px;
+}
+
+.sub_menu_main .menu_title_wrap .btn:hover{
+background:#2ecc71;
+}
+
+.sub_menu_list {
+	background-color:#ECECEC;
+	}
+.sub_menu_list li{
+  border-bottom: solid 1px #dbdfe6;
+  display:block;
+}
+.sub_menu_list a {
+	display:block;
+	color:#000;
+	text-decoration:none;
+}
+
+ul.sub_menu_main  .sub_menu_list a:hover{
+	background-color: #ffffff;
+	color: #126fdd;
+	text-decoration:none;
+
+ }
+
+
+
+/* меню что спрятано */
+
+.sub-menu
+{
+	display: none; /* прячем подменю меню sub_menu_main kolonka_01 */
+	position:absolute;
+	width: 240px;
+	left: 132px;
+	top:0;
+	z-index:1000;
+	background-color:#fff;
+	padding:0;
+}
+
+/* включение подменю меню sub_menu_main kolonka_01 .. ниже описанг процес выключения*/
+
+.kolonka_01 .main_item_01col:focus ~ .sub_menu_main,
+.kolonka_01 .main_item_01col:active ~ .sub_menu_main,
+.sub_menu_main:hover
+{
+   display: block;
+}
+
+/*выключение кнопкой close btn_submenu_close подменю sub_menu_main   */
+.kolonka_01 .btn_submenu_close:focus ~ .sub_menu_main,
+.kolonka_01 .btn_submenu_close:active ~ .sub_menu_main,
+.sub_menu_main:hover
+{
+   display: none;
+}
+
+/*
+@media (min-width: 1200px){
+.article_col { width: 100%;}
+}*/
+
+
+
+.info_txt{
+	animation: color_dif 3s infinite;
+}
+
+@keyframes color_dif {
+	0% {background: red;}
+	25% {background: green;}
+	50% { background: pink;}
+	100% {background: blue;}
+}
